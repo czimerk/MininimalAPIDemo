@@ -2,7 +2,7 @@
 {
     public class EndpointHelper
     {
-        public static void Anonymus(params IEndpointConventionBuilder[] ecb)
+        public static void Anonymous(params IEndpointConventionBuilder[] ecb)
         {
             foreach (var c in ecb)
             {

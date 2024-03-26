@@ -23,7 +23,7 @@ var app = builder
 
 app.ConfigureServices();
 
-Anonymus(
+Anonymous(
     app.MapPost("/login", (IMediator m, [FromBody] LoginCommand login) => m.Send(login)).AllowAnonymous(),
     app.MapGet("/orders/{id}/status", (IMediator m, Guid id) => m.Send(new GetOrderStatusQuery(id)))
 );
